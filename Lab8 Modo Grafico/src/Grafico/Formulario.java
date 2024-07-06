@@ -153,6 +153,9 @@ public class Formulario extends JFrame {
             String nombre = textNombre.getText();
             String cedula = textCedula.getText();
             double indice = Double.parseDouble(textIndice.getText());
+            if (indice < 0 || indice > 3) {
+                throw new IllegalArgumentException("El índice debe estar entre 0 y 3.");
+            }
             String carrera = (String) comboBoxCarreras.getSelectedItem();
 
 
@@ -170,8 +173,10 @@ public class Formulario extends JFrame {
             textIndice.setText("");
             comboBoxCarreras.setSelectedIndex(-1);
         } catch (NumberFormatException e) {
-
             JOptionPane.showMessageDialog(this, "Por favor, ingrese datos válidos para Índice.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        catch (IllegalArgumentException e){
+            JOptionPane.showMessageDialog(this, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 }
