@@ -30,6 +30,7 @@ public class Becas {
         return estudiantesBecados;
     }
 
+
     public Estudiantes buscarEstudiantePorCedula(String cedula) {
         for (Estudiantes estudiante : estudiantes) {
             if (estudiante.getCedula().equals(cedula)) {
@@ -56,3 +57,6 @@ public class Becas {
         return estudiantesFiltrados;
     }
 }
+
+}
+

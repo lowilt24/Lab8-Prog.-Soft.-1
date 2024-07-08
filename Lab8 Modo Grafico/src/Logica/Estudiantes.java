@@ -1,6 +1,7 @@
 package Logica;
 
 public class Estudiantes {
+
     private String nombre;
     private String cedula;
     private String carrera;
@@ -8,11 +9,21 @@ public class Estudiantes {
     private String sexo; // Nuevo atributo
 
     public Estudiantes(String nombre, String cedula, String carrera, double indiceAcademico, String sexo) {
+
+        private String nombre;
+        private String cedula;
+        private String carrera;
+        private double indiceAcademico;
+
+    public Estudiantes(String nombre, String cedula, String carrera, double indiceAcademico){
+
         this.nombre = nombre;
         this.cedula = cedula;
         this.carrera = carrera;
         this.indiceAcademico = indiceAcademico;
+
         this.sexo = sexo; // Asignación del nuevo atributo
+
     }
 
     public double getIndiceAcademico() {
@@ -22,6 +33,7 @@ public class Estudiantes {
     public String getNombre() {
         return nombre;
     }
+
 
     public String getCedula() {
         return cedula;
@@ -35,3 +47,6 @@ public class Estudiantes {
         return sexo;
     }
 }
+
+}
+
